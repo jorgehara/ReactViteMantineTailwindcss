@@ -73,7 +73,8 @@ import {
     { title: "Email", description: "jorgejara2014@gmail.com", icon: IconAt },
     { title: "Phone", description: "+549 (379) 4051686", icon: IconPhone },
     { title: "Address", description: "Argentina", icon: IconMapPin },
-    { title: "Working hours", description: "8 a.m. – 11 p.m.", icon: IconSun }
+    // { title: "Working hours", description: "8 a.m. – 11 p.m.", icon: IconSun },
+    { title: "BasicPortFolio", description: "https://react-vite-mantine-tailwindcss-5yoygnq36-jorgehara.vercel.app/", icon: IconAt }
   ]
   
   export function ContactIconsList({ data = MOCKDATA, variant }) {
