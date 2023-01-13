@@ -88,10 +88,10 @@ const PrincipalCard = () => {
           Development Frontend
         </Title>
         <Text className={classes.description} size="xl" mt="xl">
-          No te rindas nunca, porque nunca sabes si el próximo intento será el
-          que funcionará.
-          <br />- Winnie the Pooh-
+        Never give up, because you never know if the next try is going to be the one that works. 
+          <br />-Mary Kay Ash-
         </Text>
+        <br />
         <Modals />
 
         {/* <Button
