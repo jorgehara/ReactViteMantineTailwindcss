@@ -9,6 +9,10 @@ import {
 import { Contact } from "./Contact/Contact";
 import { ContactIconsList } from "./Contact/ContactIconList";
 import Modals from "./Modal/Modals";
+import SecondaryCards from "./SecondaryCards/SecondaryCards";
+// import TableOfCharacters from "./TableOf/TableOfCharacters";
+import TableOfCharacteresEjemplo from "./TableOf/TableOfCharactesEjemplo";
+import TablePerson from "./TableOf/TablePerson";
 
 const useStyles = createStyles((theme) => ({
   hero: {
@@ -20,7 +24,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   container: {
-    height: 500,
+    // height: 1900,
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-end",
@@ -98,10 +102,23 @@ const PrincipalCard = () => {
           variant="gradient"
           size="xl"
           radius="xl"
-          className={classes.control}
-         
-        >
+          className={classes.control}>
         </Button> */}
+        <br />
+        <br />
+        <SecondaryCards/>
+
+
+
+      </Container>
+
+
+      <Container className={classes.container}>
+       {/* <TableOfCharacters/> */}
+
+      {/* <TableOfCharacteresEjemplo/> */}
+      <TablePerson/>
+
       </Container>
     </div>
   );
