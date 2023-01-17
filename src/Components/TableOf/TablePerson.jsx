@@ -7,6 +7,7 @@ const TablePerson = () => {
     const [data, setData] = useState([]);
   
     useEffect(() => {
+      
       // Aquí se puede hacer la llamada a una API para obtener los datos
       // o asignar el objeto JSON directamente como se muestra en tu ejemplo
       setData([
@@ -59,8 +60,10 @@ const useStyles = createStyles((theme) => ({
               : theme.colors[theme.primaryColor][0],
         },
       }));
-const { classes, cx } = useStyles();
+  const {classes, cx} = useStyles();
+
   const [selection, setSelection] = useState(['1']);
+
   const toggleRow = (id) =>
     setSelection((current) =>
       current.includes(id) ? current.filter((item) => item !== id) : [...current, id]
@@ -95,7 +98,7 @@ const { classes, cx } = useStyles();
 
     return (
       <div>
-         <ScrollArea>
+  <ScrollArea>
       <Table sx={{ minWidth: 800 }} verticalSpacing="sm">
         <thead>
           <tr>

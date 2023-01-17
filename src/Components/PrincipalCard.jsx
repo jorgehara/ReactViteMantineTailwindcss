@@ -9,10 +9,8 @@ import {
 import { Contact } from "./Contact/Contact";
 import { ContactIconsList } from "./Contact/ContactIconList";
 import Modals from "./Modal/Modals";
+import PersonCard from "./PersonCard/PersonCard";
 import SecondaryCards from "./SecondaryCards/SecondaryCards";
-// import TableOfCharacters from "./TableOf/TableOfCharacters";
-import TableOfCharacteresEjemplo from "./TableOf/TableOfCharactesEjemplo";
-import TablePerson from "./TableOf/TablePerson";
 
 const useStyles = createStyles((theme) => ({
   hero: {
@@ -98,12 +96,6 @@ const PrincipalCard = () => {
         <br />
         <Modals />
 
-        {/* <Button
-          variant="gradient"
-          size="xl"
-          radius="xl"
-          className={classes.control}>
-        </Button> */}
         <br />
         <br />
         <SecondaryCards/>
@@ -114,10 +106,8 @@ const PrincipalCard = () => {
 
 
       <Container className={classes.container}>
-       {/* <TableOfCharacters/> */}
 
-      {/* <TableOfCharacteresEjemplo/> */}
-      <TablePerson/>
+      <PersonCard/>
 
       </Container>
     </div>
