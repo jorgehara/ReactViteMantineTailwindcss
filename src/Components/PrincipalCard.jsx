@@ -138,14 +138,27 @@ const PrincipalCard = () => {
       </Container>
       <Container className={classes.containerCard}>
       <Title className={classes.subtitle}>
-         Components Twitter
+         Component Twitter
         </Title><br />
         <ContainerTwitterCard/>
-
       </Container>
-        <Tateti/>
-      <Container className={classes.container}>
+
+      <Container className={classes.containerCard}>
+      <Title className={classes.subtitle}>
+         Component PersonsCard GetArray from Api 
+        </Title><br />
       <PersonCard/>
+      </Container>
+
+      <Container className={classes.containerCard}>
+      <Title className={classes.subtitle}>
+         Component Game TaTeTi 
+        </Title><br />
+        <Tateti/>
+      </Container>
+
+
+      <Container className={classes.container}>
       </Container>
     </div>
   );
