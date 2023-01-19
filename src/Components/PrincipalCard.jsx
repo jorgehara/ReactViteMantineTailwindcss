@@ -6,10 +6,13 @@ import {
   Button,
   Text,
 } from "@mantine/core";
+import ContainerTwitterCard from "./TwitterComponents/ContainerTwitterCard";
+import TwitterCard from "./TwitterComponents/TwitterCard";
 import { Contact } from "./Contact/Contact";
 import { ContactIconsList } from "./Contact/ContactIconList";
 import Modals from "./Modal/Modals";
 import PersonCard from "./PersonCard/PersonCard";
+import SecondaryCard from "./SecondaryCards/SecondaryCard";
 import SecondaryCards from "./SecondaryCards/SecondaryCards";
 
 const useStyles = createStyles((theme) => ({
@@ -30,6 +33,21 @@ const useStyles = createStyles((theme) => ({
     paddingBottom: theme.spacing.xl * 6,
     zIndex: 1,
     position: "relative",
+
+    [theme.fn.smallerThan("sm")]: {
+      height: 500,
+      paddingBottom: theme.spacing.xl * 3,
+    },
+  },
+  containerCard: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-end",
+    alignItems: "flex-start",
+    paddingBottom: theme.spacing.xl * 2,
+    zIndex: 1,
+    position: "relative",
+    backgroundColor: (255, 0, 0, 0.25),
 
     [theme.fn.smallerThan("sm")]: {
       height: 500,
@@ -98,17 +116,14 @@ const PrincipalCard = () => {
 
         <br />
         <br />
-        <SecondaryCards/>
-
-
+        <SecondaryCard/>
+      </Container>
+      <Container className={classes.containerCard}>
+        <ContainerTwitterCard/>
 
       </Container>
-
-
       <Container className={classes.container}>
-
       <PersonCard/>
-
       </Container>
     </div>
   );

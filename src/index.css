@@ -77,6 +77,15 @@ body{
   display: flex;
   flex-flow:nowrap ;
 }
+
+.mantine-1motpwi{
+  background-color: #000;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+
+
 /* body {
   margin: 0;
   display: flex;

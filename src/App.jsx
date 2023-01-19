@@ -1,20 +1,22 @@
-// import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
-
-import PrincipalCard from './Components/PrincipalCard'
-import { Contact } from './Components/Contact/Contact'
-import Modals from './Components/Modal/Modals'
+import "./App.css";
+import PrincipalCard from "./Components/PrincipalCard";
+import { DarkModeSwitch } from 'react-toggle-dark-mode';
+import { Switch } from "@mantine/core";
 
 function App() {
+  // const darkMode = useDarkMode();
 
   return (
-    <div className="App">
-      <PrincipalCard/>
-   
-      
-    </div>
-  )
+    <>
+    <div>
+      {/* <DarkModeSwitch> */}
+        <h1>Welcome to my App</h1>
+        {/* <Switch onClick={darkMode.toggle} /> */}
+        <PrincipalCard />
+      {/* </DarkModeSwitch> */}
+      </div>
+    </>
+  );
 }
 
-export default App
+export default App;
