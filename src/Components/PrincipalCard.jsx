@@ -14,6 +14,7 @@ import Modals from "./Modal/Modals";
 import PersonCard from "./PersonCard/PersonCard";
 import SecondaryCard from "./SecondaryCards/SecondaryCard";
 import SecondaryCards from "./SecondaryCards/SecondaryCards";
+import { Tateti } from "./TatetiComponents/Tateti";
 
 const useStyles = createStyles((theme) => ({
   hero: {
@@ -44,13 +45,14 @@ const useStyles = createStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "flex-end",
     alignItems: "flex-start",
-    paddingBottom: theme.spacing.xl * 2,
+    paddingBottom: theme.spacing.xl * 1,
+    paddingTop: theme.spacing.xl * -0.5,
     zIndex: 1,
     position: "relative",
-    backgroundColor: (255, 0, 0, 0.25),
+    backgroundColor: (255, 255, 255),
 
     [theme.fn.smallerThan("sm")]: {
-      height: 500,
+      height: 100,
       paddingBottom: theme.spacing.xl * 3,
     },
   },
@@ -59,6 +61,22 @@ const useStyles = createStyles((theme) => ({
     color: theme.white,
     fontSize: 60,
     fontWeight: 900,
+    lineHeight: 1.1,
+
+    [theme.fn.smallerThan("sm")]: {
+      fontSize: 40,
+      lineHeight: 1.2,
+    },
+
+    [theme.fn.smallerThan("xs")]: {
+      fontSize: 28,
+      lineHeight: 1.3,
+    },
+  },
+  subtitle: {
+    color: theme.white,
+    fontSize: 40,
+    fontWeight: 500,
     lineHeight: 1.1,
 
     [theme.fn.smallerThan("sm")]: {
@@ -119,9 +137,13 @@ const PrincipalCard = () => {
         <SecondaryCard/>
       </Container>
       <Container className={classes.containerCard}>
+      <Title className={classes.subtitle}>
+         Components Twitter
+        </Title><br />
         <ContainerTwitterCard/>
 
       </Container>
+        <Tateti/>
       <Container className={classes.container}>
       <PersonCard/>
       </Container>
