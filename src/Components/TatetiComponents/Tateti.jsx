@@ -43,6 +43,33 @@ const [board, setBoard] = useState (Array(9).fill(null));
   //null is not winner, false is tie
   const [winner, setWinner] = useState (null);
   
+const updateBoard = (index) => {
+      //no update the board
+      if (board[index] || winner ) return;
+      //update board
+      const newBoard = [...board];
+      newBoard[index] = turn;
+      setBoard(newBoard);
+      //change turn
+      const newTurn = turn === TURNS.X ? TURNS.O : TURNS.X;
+      setTurn(newTurn);
+      //check winner
+      const newWinner = checkWinner(newBoard);
+      if (newWinner) {
+        confetti()
+        setWinner(newWinner); 
+        // setWinner(
+        //   (prevWinner) => {
+        //   console.log('Ganador: ${newWinner}, el anterior era ${prevWinner}')
+        //   return newWinner;
+        // })
+  
+      } //Check if the game is over
+      else if (checkEndGame(newBoard)) {
+        setWinner(false); //tie
+      }
+  }
+  
   const checkWinner = (boardToCheck) => {
     //running the combinations winners
     for (const combo of WINNER_COMBOS) {
@@ -71,39 +98,6 @@ const [board, setBoard] = useState (Array(9).fill(null));
     //if there are no more empty spaces, the game is over
     return newBoard.every((square) => square !== null);
   }
-
-
-
-
-
-  const updateBoard = (index) => {
-    //no update the board
-    if (board[index] || winner ) return;
-    //update board
-    const newBoard = [...board];
-    newBoard[index] = turn;
-    setBoard(newBoard);
-    //change turn
-    const newTurn = turn === TURNS.X ? TURNS.O : TURNS.X;
-    setTurn(newTurn);
-    //check winner
-    const newWinner = checkWinner(newBoard);
-    if (newWinner) {
-      confetti()
-      setWinner(newWinner); 
-      // setWinner(
-      //   (prevWinner) => {
-      //   console.log('Ganador: ${newWinner}, el anterior era ${prevWinner}')
-      //   return newWinner;
-      // })
-
-    } //Check if the game is over
-    else if (checkEndGame(newBoard)) {
-      setWinner(false); //tie
-    }
-  }
-
-
 
 
   return (
